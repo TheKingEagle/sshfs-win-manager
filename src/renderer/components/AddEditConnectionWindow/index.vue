@@ -155,7 +155,7 @@ export default {
       isEditingMode: false,
 
       title: 'Add Connection',
-      drives: 'DEFGHIJKLMNOPQRSTUVWXYZ',
+      drives: 'ABDEFGHIJKLMNOPQRSTUVWXYZ',
 
       conn: {
         uuid: uuid(),
