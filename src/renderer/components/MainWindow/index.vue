@@ -102,13 +102,13 @@ export default {
 
     connect (conn) {
       conn.status = 'connecting'
-
+      console.log('CONNECT REQUEST CONN MP: ', conn.mountPoint)
       const connect = c => {
         ProcessManager.create(c).then(pid => {
           conn.pid = pid
           conn.status = 'connected'
-
-          this.updateConnectionList()
+          // this.updateConnectionList()
+          // OK why is this fixing that issue?
         }).catch(error => {
           conn.status = 'disconnected'
 
