@@ -228,7 +228,7 @@ class ProcessHandlerWin {
   getFirstAvailableDriveLetter (preferredMountPoint = null) {
     return new Promise((resolve, reject) => {
       exec(`wmic logicaldisk get name`, (err, stdout) => {
-        const driveLetters = 'DEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+        const driveLetters = 'ABDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 
         if (!err) {
           const drivers = stdout.toString().trim().split('\n').slice(1)
